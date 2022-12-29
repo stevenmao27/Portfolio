@@ -1,12 +1,36 @@
-body {
-    background-color:white;
-    color:black;
+/* Variables */
+
+:root {
+    --navbar-height: 90px;
 }
 
-.dark-mode {
-    background-color: black;
-    color:white;
+@media only screen and (max-width:322px) {
+    :root {
+        --navbar-height: 130px;
+    }
 }
+
+/* More Customization */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: lightgray;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    padding: 5px;
+    background-color: darkgray;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+/* Github Markdown Classes */
 
 .markdown-body {
     box-sizing: border-box;
@@ -21,3 +45,129 @@ body {
         padding: 15px;
     }
 }
+
+/* Basic Element Configuration */
+
+h1, h2, h3 {
+    font-family: 'Playfair Display SC', serif;
+    margin: 0px 0px;
+}
+
+h4, h5, h6, p {
+    font-family: 'Roboto Slab', serif;
+    margin: 0px 0px;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 2rem;
+}
+
+.nav-link {
+    font-family: 'Roboto Slab', serif;
+    margin: auto 1.5em;
+}
+
+/* Section IDs and Classes */
+
+#intro, #about-me, #work, #projects, #skills, #hobbies, #contact {scroll-margin-top: var(--navbar-height);}
+
+#intro {
+    margin-top: var(--navbar-height);
+    max-height: 91vh;
+    height: 91vh;
+    text-align: center;
+    background-color:lightblue;
+}
+
+.intro-name {font-size: 5rem; margin-top: 3em; display:inline-block;} /* Careful of margin collapsing */
+.intro-desc {font-size: 1.75rem; margin-top: 60px; color: rgb(80, 80, 80);}
+@keyframes blob {  
+    0% {border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;}
+    14% {border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;}
+    28% {border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;}
+    42% {border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;}
+    56% {border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;}
+    70% {border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;}
+    84% {border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;}
+    100% {border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;}
+}
+.intro-img {
+    border-radius: 25%; 
+    margin-top: 60px;
+    animation: blob 20s ease infinite;
+} 
+
+
+
+#about-me {
+    
+}
+
+
+
+#work {
+    
+    background-color: lightcoral;
+}
+
+#projects { 
+    
+}
+
+.project-section {}
+.project-title {}
+.project-subtext {}
+.project-desc {}
+
+.blubot-section {
+    padding: 0px;
+    background-color: azure;
+}
+
+.blubot-link {
+    border-radius: 5px;
+    border: 1px solid #000;
+    color: #000;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 60px 15px 76px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.blubot-link:hover {
+    color: #fff;
+    background-color: #000;
+}
+.blubot-link::after {
+    content: "〉";
+    margin-left: 0px;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.blubot-link:hover::after {
+    margin-left: 20px;
+    opacity: 1;
+}
+
+.agtern-presentation {
+    width: 600px;
+    height: 500px;
+}
+
+#skills {
+    
+    background-color: lightgreen;
+}
+
+#hobbies {
+    
+}
+
+#contact {
+    
+    background-color: lightsalmon;
+}
+
+

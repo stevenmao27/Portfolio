@@ -3,243 +3,289 @@
     <head>
         <meta name="viewport" content="width=device-width">
         <meta charset="utf-8">
-        <title>Steven Mao | Portfolio </title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
-        <link rel="stylesheet" href="styles.css">
 
+        <title>Steven Mao | Portfolio </title>
+        
+        <!-- Github Markdown -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <!-- Playfair Display and Roboto Slab Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+        <!-- Manual Styles -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- Icons from FontAwesome -->
         <script src="https://use.fontawesome.com/536c0361e3.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <!-- JQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <!-- Manual Control -->
         <script src="control.js"></script>
     </head>
 
 
 
     <body>
-        <button onclick="toggleDarkMode()">Toggle Mode</button>
         <!-- Navigation Bar -->
-        <div>
-            <p>Home</p>
-            <p>About Me</p>
-            <p>Work Experience</p>
-            <p>Projects</p>
-            <p>Skills</p>
-            <p>Contact</p>
-            <p>Download Resume</p>
-        </div>
+        <nav class="navbar navbar-expand-md bg-dark-subtle p-3 fixed-top">
+            <a href="#intro" class="navbar-brand mx-2">Steven Mao</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a href="#about-me" class="nav-link">About Me</a>
+                    <a href="#work" class="nav-link">Work Experience</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#hobbies" class="nav-link">Hobbies</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#contact" class="nav-link">Resume</a>
+                </div>
+            </div>
+        </nav>
 
         <!-- Title Page -->
-        <h1>Hi, I'm Steven Mao</h1>
-        <h3>Computer Scientist, Developer, Student.</h3>
-        <img src="./images/headshot.png" alt="Professional Image" width="200px" height="200px">
+        <section id="intro">
+            <h1 class="intro-name">Hi, I'm Steven Mao</h1>
+            <h4 class="intro-desc">Computer Scientist, Developer, Student.</h3>
+            <img class="intro-img" src="./images/headshot.png" alt="Professional Image" width="200px" height="200px">
+        </section>
+        
 
         <!-- About Me -->
-        <h2>About Me</h2>
-        <p>I am an Honors Student at Texas A&M University at College Station studying Computer Science in the Engineering School! 
-            I have a passion for all things Software and Data, but I'm always open to explore new life paths. I love CS for the puzzle-like nature of back-end engineering, 
-            the artistic and creative freedom of UI/UX, and the journey of discovering subtle yet insightful information with Data Science. 
-            I am flexible yet dedicated to the projects I work on.</p>
-
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>I am an Honors Student at Texas A&M University at College Station studying Computer Science in the Engineering School! 
+                I have a passion for all things Software and Data, but I'm always open to explore new life paths. I love CS for the puzzle-like nature of back-end engineering, 
+                the artistic and creative freedom of UI/UX, and the journey of discovering subtle yet insightful information with Data Science. 
+                I am flexible yet dedicated to the projects I work on.</p>
+        </section>
+        
         <!-- Work? -->
-        <h2>Work Experience</h2>
-        <h3>Teacher Assistant @ Texas A&M University College of Engineering</h3>
-        <p><em>August 2022 - Present</em><br>
-        Teaching is surprisingly fun, and helping others learn is satisfying. Hm...</p>
-
+        <section id="work">
+            <h2>Work Experience</h2>
+            <h3>Teacher Assistant @ Texas A&M University College of Engineering</h3>
+            <p><em>August 2022 - Present</em><br>
+            Teaching is surprisingly fun, and helping others learn is satisfying. Hm...</p>
+        </section>
+        
         <!-- Projects -->
-        <h2>Projects</h2>
+        <section id="projects">
+            <h2>Projects</h2>
 
-        <h3>Portfolio Website: You're looking at it.</h3>
-        <p><em>December 2022 - Present</em></em><p>
-        <p>Resumes are boring no matter what you put on it. I decided a website was the best way to portray that with a bit of front-end skills and artistic freedom.
-        Here's a little sneak peek into the design and thought process...</p>
+            <h3 class="project-title">Portfolio Website: You're looking at it.</h3>
+            <p class="project-subtext"><em>December 2022 - Present</em></em><p>
+            <p class="project-desc">Resumes are boring no matter what you put on it. I decided a website was the best way to portray that with a bit of front-end skills and artistic freedom.
+            Here's a little sneak peek into the design and thought process...</p>
+            
+            <div class="container-fluid blubot-section">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="project-title">Blubot: Discord Music and Utility Application</h3>
+                        <p class="project-subtext"><em>May 2022 - Present</em><p>
+                        <p class="project-desc">It's hard to organize a quick five-man team to play games with a group of friends when people are committing and uncommitting. If there's no bot out there that 
+                        makes a sign up UI, why don't I make one? There's plenty of music bots out there, but I think I can make a better one. Self-updating UI on a thread, 
+                        control panel as intuitive as Spotify, and a fully functioning queue with history. It runs on a containerized daemon in an AWS EC2 instance and has 
+                        full documentation on the repository. Check it out!</p>
+                        
+                        <a class="blubot-link" href="https://github.com/stevenmao27/Blubot">Visit Blubot</a>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div style="height: 400px; overflow-y:scroll;" class="markdown-body">
+                            <h1 id="-blubot">🤖 Blubot</h1>
+                            <p><img src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="Discord"> <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&amp;logo=python&amp;logoColor=ffdd54" alt="Python"> <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&amp;logo=amazon-aws&amp;logoColor=white" alt="AWS"> <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&amp;logo=ubuntu&amp;logoColor=white" alt="Ubuntu"> <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&amp;logo=visual-studio-code&amp;logoColor=white" alt="Visual Studio Code"></p>            <p>This is a fully functioning Discord Bot with polling, event signups, full-blown music player + GUI, timers, and more miscellaneous applications and tools!</p>
+                            <h2 id="-features">🧐 Features</h2>
+                            <p>Here&#39;s a rundown of a few core features...</p>
+                            <p>🎮 The <code>.game [@role mention] [max number of players]</code> creates a GUI that keeps track of people signed up for a particular team. Select <code>add</code> or <code>remove</code> to add/remove yourself from the list. <code>perhaps</code> is a toggle button signaling interest, but not commitment.</p>
+                            <p><img src="images/game-add.png" alt="alt text"></p>
+                            <p><img src="images/game-perhaps.png" alt="alt text"></p>
+                            <p>When a team is full, newcomers can no longer add themselves, so they will have to wait for somebody else currently on the roster to leave.</p>
+                            <p><img src="images/game-full.png" alt="alt text"></p>
+                            <p>❓ The <code>.poll &quot;[question] [optional: choices]</code> is a simple way to show a poll. Omitting any choices automatically creates a yes/no poll, while additional arguments <em>separated by spaces</em> will be considered choices. If an option has a space in it, you can encase it in quotations.</p>
+                            <p>Users can only choose one choice. Clicking another choice will remove you from the current one, or you can click your current choice again to opt-out.</p>
+                            <p><img src="images/poll-binary.png" alt="alt text"></p>
+                            <p>Here, I typed <code>.poll &quot;Favorite Pizza Brand?&quot; Domino&#39;s &quot;Pizza Hut&quot; &quot;Papa John&#39;s&quot;</code></p>
+                            <p><img src="images/poll-choices.png" alt="alt text"></p>
+                            <p>🪙 The <code>.cf</code> command simply creates a button that lets you flip a coin. Click it multiple times, and something will change...</p>
+                            <p><img src="images/coinflip-1.png" alt="alt text"></p>
+                            <p><img src="images/coinflip-2.png" alt="alt text"></p>
+                            <p>📢 Encased in the <code>utility.py</code> Cog, the <code>.spam [@user] [number of times]</code> command lets you become very annoying, perhaps for the sake of bringing to attention to somebody who frequently AFKs...</p>
+                            <p><img src="images/spam.png" alt="alt text"></p>
+                            <h3 id="-the-music-module-">🎵 The Music Module 🎷</h3>
+                            <p>The most robust portion of the Bot, the music bot. Utilizing countless dependencies, you can simply get started by joining a voice channel, then using <code>.p</code>, <code>.q</code>, <code>.pn</code>, or discord&#39;s new slash command, <code>/play</code>.</p>
+                            <p>Here, I use <code>/play Minecraft Background Music 5</code> or <code>.p Minecraft Background Music -5</code> to begin searching for the top 5 results. If the number of results is omitted, it will play the top song.</p>
+                            <p><img src="images/music-query.png" alt="alt text"></p>
+                            <p>Click the button corresponding to the song you&#39;d like to play</p>
+                            <p><img src="images/music-search-results.png" alt="alt text"></p>
+                            <p>Now, use <code>/control</code> or <code>.ctrl</code> to pull up the controller/interface. It displays the current playing song, a live progress bar, timestamp, and the current queue. You may click the buttons: <code>back, pause/play, forward, shuffle queue, update control panel (in case it updates too slow)</code> or just use commands to do the same. </p>
+                            <p><img src="images/music-control.png" alt="alt text"></p>
+                            <p>This is the list of registered slash commands.</p>
+                            <ul>
+                            <li><code>/back</code>: go back a song</li>
+                            <li><code>/clear</code>: clears the queue</li>
+                            <li><code>/control</code>: brings up control panel, disables old ones</li>
+                            <li><code>/help_music</code>: lists commands for music player</li>
+                            <li><code>/leave</code>: leaves the channel</li>
+                            <li><code>/pause</code>: pauses the song</li>
+                            <li><code>/play</code>: adds selected song to front of queue</li>
+                            <li><code>/playnow</code>: skips current song and plays selected song</li>
+                            <li><code>/queue</code>: adds selected song to back of queue</li>
+                            <li><code>/restart</code>: replays current song</li>
+                            <li><code>/resume</code>: resumes the song</li>
+                            <li><code>/skip</code>: go forward a song</li>
+                            </ul>
+                            <p><img src="images/command-list.png" alt="alt text"></p>
+                            <h2 id="-setting-up-for-your-project">💪 Setting Up for Your Project</h2>
+                            <p>Make sure you&#39;ve read <a href="https://discord.com/developers/docs/getting-started">Discord&#39;s tutorial</a> on setting up your bot on discord before you try running code. This will assume your bot is registered and ready to go, or you&#39;ve got a template.</p>
+                            <h3 id="-creating-a-workspace">📂 Creating a Workspace</h3>
+                            <p>This is somewhat optional, but creating a clean workspace without conflicting/unknown programs and dependencies minimizes possible errors</p>
+                            <ul>
+                            <li><p>create a clean directory and download source files OR use <code>git clone [repository URL]</code></p>
+                            <ul>
+                            <li><p>simply create a new folder of your desired location or in a terminal, type <code>mkdir Blubot</code></p>
+                            </li>
+                            <li><p>navigate to the directory/folder</p>
+                            </li>
+                            </ul>
+                            </li>
+                            <li><p>install python&#39;s virtual environment</p>
+                            <ul>
+                            <li><code>pip install virtualenv</code> or <code>py -m pip install virtualenv</code> (use whichever alias is applicable for your python interpreter. PowerShell uses the alias <code>py</code>)</li>
+                            </ul>
+                            </li>
+                            <li><p>set up and activate the virtual environment</p>
+                            <ul>
+                            <li><p><code>py -m venv env</code> to create the virtual environment, where <code>venv</code> is the name of the module and <code>env</code> is the name of the actual environment</p>
+                            </li>
+                            <li><p><code>./env/Scripts/activate</code> to enter the virtual environment. Linux-based virtual environments will have a different path</p>
+                            </li>
+                            </ul>
+                            </li>
+                            </ul>
+                            <h3 id="-dependency-requirements">🖊️ Dependency Requirements</h3>
+                            <p>If you&#39;re not using virtual environments, make sure conflicting modules such as <code>discord</code> are uninstalled before you begin. Then, install these dependencies.</p>
+                            <p><code>pip install [dependency]</code> or <code>py -m pip install [dependency]</code></p>
+                            <ul>
+                            <li><p><code>py-cord</code></p>
+                            </li>
+                            <li><p><code>requests</code></p>
+                            </li>
+                            <li><p><code>youtube-dl</code></p>
+                            </li>
+                            <li><p><code>python-dotenv</code></p>
+                            </li>
+                            <li><p><code>PyNaCl</code></p>
+                            </li>
+                            </ul>
+                            <h3 id="-ffmpeg">🔉 FFMPEG</h3>
+                            <p>FFmpeg is an application that enables audio playback and gives Blubot the ability to play music. Make sure the application <code>ffmpeg</code> is downloaded.</p>
+                            <p>For Windows:</p>
+                            <ul>
+                            <li><p>install ffmpeg</p>
+                            <ul>
+                            <li><p>go to <code>https://www.gyan.dev/ffmpeg/builds/</code></p>
+                            </li>
+                            <li><p>install <code>ffmpeg-git-essentials.7z</code> from the git master branch build</p>
+                            </li>
+                            <li><p>extract the folder with 7z and put it in desired location; We will put the folder directly in C:\ drive (and will rename to simply <code>ffmpeg</code>)</p>
+                            </li>
+                            </ul>
+                            </li>
+                            <li><p>set environment variable (so ffmpeg can be accessed)</p>
+                            <ul>
+                            <li><p>go to Windows Start 🪟 and type <code>environment variables</code> to open <code>edit the system environment variables</code></p>
+                            </li>
+                            <li><p>go to <code>environment variables...</code></p>
+                            </li>
+                            <li><p>scroll down <code>system variables</code> list until you find the variable <code>Path</code></p>
+                            </li>
+                            <li><p>click <code>Edit...</code> then <code>New</code></p>
+                            </li>
+                            <li><p>type the <strong>absolute path</strong> of the ffmpeg executable <em>folder</em> aka &quot;bin&quot;. Since we put the downloaded folder in the C:\ drive, the path is <code>C:\ffmpeg\bin</code></p>
+                            </li>
+                            </ul>
+                            </li>
+                            <li><p>verify that ffmpeg was installed correctly:</p>
+                            <ul>
+                            <li><p>open Command Prompt or PowerShell</p>
+                            </li>
+                            <li><p>type <code>ffmpeg -version</code> or just <code>ffmpeg</code>, and you should get some non-error response.</p>
+                            </li>
+                            </ul>
+                            </li>
+                            </ul>
+                            <h2 id="-run-the-project">🏃‍♂️💨 Run the Project</h2>
+                            <h3 id="-configure-code">👨‍💻 Configure Code</h3>
+                            <p>There are some minor changes you must make for the code to work, since this Bot is personalized.</p>
+                            <ul>
+                            <li><p>In the <code>main.py</code> file where the bot is being initialized, locate <code>debug_guilds</code>. Here you have two choices:</p>
+                            <ol>
+                            <li><p>To make the bot global, simply delete the keyword argument and the list. This is usually slow and takes minutes for Blubot to register</p>
+                            </li>
+                            <li><p>To make it available on a few servers and for quick setup, add your own desired Server IDs in the list. Refer to <a href="https://www.alphr.com/discord-find-server-id/">this article</a> to find your server id.</p>
+                            </li>
+                            </ol>
+                            </li>
+                            <li><p>Set up your API Token, the password that lets you actually control your bot. Make sure to keep it off the internet or put it somewhere safe.</p>
+                            <ul>
+                            <li><p>Find your API Token in the <a href="https://discord.com/developers/applications">Developer Dashboard</a></p>
+                            </li>
+                            <li><p>Select your app &gt; Go down to Bot &gt; Copy or Reset your Token</p>
+                            </li>
+                            <li><p>In the Blubot directory, create a file called <code>.env</code> which will serve as your secret file</p>
+                            </li>
+                            <li><p>Type <code>BLUBOT_API_TOKEN = &#39;YOUR TOKEN HERE&#39;</code> and save it. You may change the name of the variable as long as the same variable name is changed in <code>main.py</code></p>
+                            </li>
+                            </ul>
+                            </li>
+                            </ul>
+                            <p>Once you&#39;re in the Blubot repository, simply run the driver application:</p>
+                            <p><code>py .\source\main.py</code></p>
+                            <p>Have fun!</p>
+                            <h2 id="-contact">✉️ Contact</h2>
+                            <p>If you have questions, email me at <a href="mailto:steven2003mao@gmail.com">steven2003mao@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+    
+            <h3 class="project-title">American Airlines</h3>
+            <p class="project-subtext"><em>November 2022 - Present</em><p>
+            <p class="project-desc">A data science and statistics focused team project. Given an official and raw dataset of airport-related activity from American Airlines, the goal is to design and 
+            implement a machine learning model that will predict the amount of checked bags given any time, source, destination, airport, and more parameters. This is an 
+            ongoing project whose goal is incredibly simple yet the solution is more sophisticated than it seems.</p>
+    
+            <h3 class="project-title">Agtern</h3>
+            <p class="project-subtext"><em>August 2022 - December 2022</em><p>
+            <figure>
+                <img class="agtern-presentation" src="./images/agtern-presentation.png" alt="presentation photo">
+                <figcaption>Presenting Our Project to the University. It's a circular auditorium, so you can only see my back. (casual dress code)</figcaption>
+            </figure>
+            
+            <p class="project-desc">Agtern was a team project led by a good friend. A software focused on getting University Students internships, its main functions were to scrape
+            across many websites, categorize and identify their appropriate major-specific attributes, and display them on a nice GUI. The majority of my contribution was towards
+            developing the GUI. We first began using Python's abhhorently ugly Tkinter module, which, similar to Java FX/SceneBuilder and other desktop GUI programs, was divided into
+            "frames" or "panels", the equivalent of a stylized div. Soon, we realized the Windows Vista-like GUI wasn't going to fly, so we then transitioned to Angular. Despite 
+            copying the exact same UI structure, it looked many degrees better!</p>
+        </section>
         
-        <h3>Blubot: Discord Music and Utility Application</h3>
-        <p><em>May 2022 - Present</em><p>
-        <p>It's hard to organize a quick five-man team to play games with a group of friends when people are committing and uncommitting. If there's no bot out there that 
-        makes a sign up UI, why don't I make one? There's plenty of music bots out there, but I think I can make a better one. Self-updating UI on a thread, 
-        control panel as intuitive as Spotify, and a fully functioning queue with history. It runs on a containerized daemon in an AWS EC2 instance and has 
-        full documentation on the repository. Check it out!</p>
-
-        <form action="https://github.com/stevenmao27/Blubot">
-            <input type="submit" value="Visit Blubot" />
-        </form>
-        
-        <div style="height: 400px; overflow-y:scroll;" class="markdown-body">
-            <h1 id="-blubot">🤖 Blubot</h1>
-            <p><img src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="Discord"> <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&amp;logo=python&amp;logoColor=ffdd54" alt="Python"> <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&amp;logo=amazon-aws&amp;logoColor=white" alt="AWS"> <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&amp;logo=ubuntu&amp;logoColor=white" alt="Ubuntu"> <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&amp;logo=visual-studio-code&amp;logoColor=white" alt="Visual Studio Code"></p>            <p>This is a fully functioning Discord Bot with polling, event signups, full-blown music player + GUI, timers, and more miscellaneous applications and tools!</p>
-            <h2 id="-features">🧐 Features</h2>
-            <p>Here&#39;s a rundown of a few core features...</p>
-            <p>🎮 The <code>.game [@role mention] [max number of players]</code> creates a GUI that keeps track of people signed up for a particular team. Select <code>add</code> or <code>remove</code> to add/remove yourself from the list. <code>perhaps</code> is a toggle button signaling interest, but not commitment.</p>
-            <p><img src="images/game-add.png" alt="alt text"></p>
-            <p><img src="images/game-perhaps.png" alt="alt text"></p>
-            <p>When a team is full, newcomers can no longer add themselves, so they will have to wait for somebody else currently on the roster to leave.</p>
-            <p><img src="images/game-full.png" alt="alt text"></p>
-            <p>❓ The <code>.poll &quot;[question] [optional: choices]</code> is a simple way to show a poll. Omitting any choices automatically creates a yes/no poll, while additional arguments <em>separated by spaces</em> will be considered choices. If an option has a space in it, you can encase it in quotations.</p>
-            <p>Users can only choose one choice. Clicking another choice will remove you from the current one, or you can click your current choice again to opt-out.</p>
-            <p><img src="images/poll-binary.png" alt="alt text"></p>
-            <p>Here, I typed <code>.poll &quot;Favorite Pizza Brand?&quot; Domino&#39;s &quot;Pizza Hut&quot; &quot;Papa John&#39;s&quot;</code></p>
-            <p><img src="images/poll-choices.png" alt="alt text"></p>
-            <p>🪙 The <code>.cf</code> command simply creates a button that lets you flip a coin. Click it multiple times, and something will change...</p>
-            <p><img src="images/coinflip-1.png" alt="alt text"></p>
-            <p><img src="images/coinflip-2.png" alt="alt text"></p>
-            <p>📢 Encased in the <code>utility.py</code> Cog, the <code>.spam [@user] [number of times]</code> command lets you become very annoying, perhaps for the sake of bringing to attention to somebody who frequently AFKs...</p>
-            <p><img src="images/spam.png" alt="alt text"></p>
-            <h3 id="-the-music-module-">🎵 The Music Module 🎷</h3>
-            <p>The most robust portion of the Bot, the music bot. Utilizing countless dependencies, you can simply get started by joining a voice channel, then using <code>.p</code>, <code>.q</code>, <code>.pn</code>, or discord&#39;s new slash command, <code>/play</code>.</p>
-            <p>Here, I use <code>/play Minecraft Background Music 5</code> or <code>.p Minecraft Background Music -5</code> to begin searching for the top 5 results. If the number of results is omitted, it will play the top song.</p>
-            <p><img src="images/music-query.png" alt="alt text"></p>
-            <p>Click the button corresponding to the song you&#39;d like to play</p>
-            <p><img src="images/music-search-results.png" alt="alt text"></p>
-            <p>Now, use <code>/control</code> or <code>.ctrl</code> to pull up the controller/interface. It displays the current playing song, a live progress bar, timestamp, and the current queue. You may click the buttons: <code>back, pause/play, forward, shuffle queue, update control panel (in case it updates too slow)</code> or just use commands to do the same. </p>
-            <p><img src="images/music-control.png" alt="alt text"></p>
-            <p>This is the list of registered slash commands.</p>
-            <ul>
-            <li><code>/back</code>: go back a song</li>
-            <li><code>/clear</code>: clears the queue</li>
-            <li><code>/control</code>: brings up control panel, disables old ones</li>
-            <li><code>/help_music</code>: lists commands for music player</li>
-            <li><code>/leave</code>: leaves the channel</li>
-            <li><code>/pause</code>: pauses the song</li>
-            <li><code>/play</code>: adds selected song to front of queue</li>
-            <li><code>/playnow</code>: skips current song and plays selected song</li>
-            <li><code>/queue</code>: adds selected song to back of queue</li>
-            <li><code>/restart</code>: replays current song</li>
-            <li><code>/resume</code>: resumes the song</li>
-            <li><code>/skip</code>: go forward a song</li>
-            </ul>
-            <p><img src="images/command-list.png" alt="alt text"></p>
-            <h2 id="-setting-up-for-your-project">💪 Setting Up for Your Project</h2>
-            <p>Make sure you&#39;ve read <a href="https://discord.com/developers/docs/getting-started">Discord&#39;s tutorial</a> on setting up your bot on discord before you try running code. This will assume your bot is registered and ready to go, or you&#39;ve got a template.</p>
-            <h3 id="-creating-a-workspace">📂 Creating a Workspace</h3>
-            <p>This is somewhat optional, but creating a clean workspace without conflicting/unknown programs and dependencies minimizes possible errors</p>
-            <ul>
-            <li><p>create a clean directory and download source files OR use <code>git clone [repository URL]</code></p>
-            <ul>
-            <li><p>simply create a new folder of your desired location or in a terminal, type <code>mkdir Blubot</code></p>
-            </li>
-            <li><p>navigate to the directory/folder</p>
-            </li>
-            </ul>
-            </li>
-            <li><p>install python&#39;s virtual environment</p>
-            <ul>
-            <li><code>pip install virtualenv</code> or <code>py -m pip install virtualenv</code> (use whichever alias is applicable for your python interpreter. PowerShell uses the alias <code>py</code>)</li>
-            </ul>
-            </li>
-            <li><p>set up and activate the virtual environment</p>
-            <ul>
-            <li><p><code>py -m venv env</code> to create the virtual environment, where <code>venv</code> is the name of the module and <code>env</code> is the name of the actual environment</p>
-            </li>
-            <li><p><code>./env/Scripts/activate</code> to enter the virtual environment. Linux-based virtual environments will have a different path</p>
-            </li>
-            </ul>
-            </li>
-            </ul>
-            <h3 id="-dependency-requirements">🖊️ Dependency Requirements</h3>
-            <p>If you&#39;re not using virtual environments, make sure conflicting modules such as <code>discord</code> are uninstalled before you begin. Then, install these dependencies.</p>
-            <p><code>pip install [dependency]</code> or <code>py -m pip install [dependency]</code></p>
-            <ul>
-            <li><p><code>py-cord</code></p>
-            </li>
-            <li><p><code>requests</code></p>
-            </li>
-            <li><p><code>youtube-dl</code></p>
-            </li>
-            <li><p><code>python-dotenv</code></p>
-            </li>
-            <li><p><code>PyNaCl</code></p>
-            </li>
-            </ul>
-            <h3 id="-ffmpeg">🔉 FFMPEG</h3>
-            <p>FFmpeg is an application that enables audio playback and gives Blubot the ability to play music. Make sure the application <code>ffmpeg</code> is downloaded.</p>
-            <p>For Windows:</p>
-            <ul>
-            <li><p>install ffmpeg</p>
-            <ul>
-            <li><p>go to <code>https://www.gyan.dev/ffmpeg/builds/</code></p>
-            </li>
-            <li><p>install <code>ffmpeg-git-essentials.7z</code> from the git master branch build</p>
-            </li>
-            <li><p>extract the folder with 7z and put it in desired location; We will put the folder directly in C:\ drive (and will rename to simply <code>ffmpeg</code>)</p>
-            </li>
-            </ul>
-            </li>
-            <li><p>set environment variable (so ffmpeg can be accessed)</p>
-            <ul>
-            <li><p>go to Windows Start 🪟 and type <code>environment variables</code> to open <code>edit the system environment variables</code></p>
-            </li>
-            <li><p>go to <code>environment variables...</code></p>
-            </li>
-            <li><p>scroll down <code>system variables</code> list until you find the variable <code>Path</code></p>
-            </li>
-            <li><p>click <code>Edit...</code> then <code>New</code></p>
-            </li>
-            <li><p>type the <strong>absolute path</strong> of the ffmpeg executable <em>folder</em> aka &quot;bin&quot;. Since we put the downloaded folder in the C:\ drive, the path is <code>C:\ffmpeg\bin</code></p>
-            </li>
-            </ul>
-            </li>
-            <li><p>verify that ffmpeg was installed correctly:</p>
-            <ul>
-            <li><p>open Command Prompt or PowerShell</p>
-            </li>
-            <li><p>type <code>ffmpeg -version</code> or just <code>ffmpeg</code>, and you should get some non-error response.</p>
-            </li>
-            </ul>
-            </li>
-            </ul>
-            <h2 id="-run-the-project">🏃‍♂️💨 Run the Project</h2>
-            <h3 id="-configure-code">👨‍💻 Configure Code</h3>
-            <p>There are some minor changes you must make for the code to work, since this Bot is personalized.</p>
-            <ul>
-            <li><p>In the <code>main.py</code> file where the bot is being initialized, locate <code>debug_guilds</code>. Here you have two choices:</p>
-            <ol>
-            <li><p>To make the bot global, simply delete the keyword argument and the list. This is usually slow and takes minutes for Blubot to register</p>
-            </li>
-            <li><p>To make it available on a few servers and for quick setup, add your own desired Server IDs in the list. Refer to <a href="https://www.alphr.com/discord-find-server-id/">this article</a> to find your server id.</p>
-            </li>
-            </ol>
-            </li>
-            <li><p>Set up your API Token, the password that lets you actually control your bot. Make sure to keep it off the internet or put it somewhere safe.</p>
-            <ul>
-            <li><p>Find your API Token in the <a href="https://discord.com/developers/applications">Developer Dashboard</a></p>
-            </li>
-            <li><p>Select your app &gt; Go down to Bot &gt; Copy or Reset your Token</p>
-            </li>
-            <li><p>In the Blubot directory, create a file called <code>.env</code> which will serve as your secret file</p>
-            </li>
-            <li><p>Type <code>BLUBOT_API_TOKEN = &#39;YOUR TOKEN HERE&#39;</code> and save it. You may change the name of the variable as long as the same variable name is changed in <code>main.py</code></p>
-            </li>
-            </ul>
-            </li>
-            </ul>
-            <p>Once you&#39;re in the Blubot repository, simply run the driver application:</p>
-            <p><code>py .\source\main.py</code></p>
-            <p>Have fun!</p>
-            <h2 id="-contact">✉️ Contact</h2>
-            <p>If you have questions, email me at <a href="mailto:steven2003mao@gmail.com">steven2003mao@gmail.com</a></p>
-        </div>
-
-        <h3>American Airlines</h3>
-        <p><em>November 2022 - Present</em><p>
-        <p>A data science and statistics focused team project. Given an official and raw dataset of airport-related activity from American Airlines, the goal is to design and 
-        implement a machine learning model that will predict the amount of checked bags given any time, source, destination, airport, and more parameters. This is an 
-        ongoing project whose goal is incredibly simple yet the solution is more sophisticated than it seems.</p>
-
-        <h3>Agtern</h3>
-        <p><em>August 2022 - December 2022</em><p>
-        <figure>
-            <img src="./images/agtern-presentation.png" alt="presentation photo">
-            <figcaption>Presenting Our Project to the University. It's a circular auditorium, so you can only see my back. (casual dress code)</figcaption>
-        </figure>
-        
-        <p>Agtern was a team project led by a good friend. A software focused on getting University Students internships, its main functions were to scrape
-        across many websites, categorize and identify their appropriate major-specific attributes, and display them on a nice GUI. The majority of my contribution was towards
-        developing the GUI. We first began using Python's abhhorently ugly Tkinter module, which, similar to Java FX/SceneBuilder and other desktop GUI programs, was divided into
-        "frames" or "panels", the equivalent of a stylized div. Soon, we realized the Windows Vista-like GUI wasn't going to fly, so we then transitioned to Angular. Despite 
-        copying the exact same UI structure, it looked many degrees better!</p>
         
         <!-- Skills and Hobbies? -->
+        <section id="skills">
+            <h2>Skills</h2>
+        </section>
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+        </section>
         <!-- Contact Information -->
-        <section>
+        <section id="contact">
             <h2>Contact</h2>
             <table>
                 <tr>
