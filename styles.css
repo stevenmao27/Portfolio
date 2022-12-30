@@ -74,13 +74,43 @@ h4, h5, h6, p {
 
 /* Section IDs and Classes */
 
+.navbar {background-color: lightgray;}
+
+.progress-track {
+    z-index: 1;
+    position: fixed;
+    background: linear-gradient(90deg, rgba(35,21,87,1) 0%, rgba(68,16,122,1) 29%, rgba(255,19,97,1) 67%, rgba(255,248,0,1) 100%);
+    width: 100%;
+    height: 15px;
+}
+.progress-bar {
+    /* background: linear-gradient(
+        90deg, 
+        rgba(0, 0, 0, 1) 0%, 
+        rgba(0, 63, 107, 1) 9%, 
+        rgba(191, 131, 0, 1) 20%, 
+        rgba(240, 207, 59, 1) 25%, 
+        rgba(0, 198, 255, 1) 50%, 
+        rgba(255, 248, 0, 1) 69%, 
+        rgba(255, 19, 97, 1) 77%, 
+        rgba(138, 67, 204, 1) 82%, 
+        rgba(68, 16, 122, 1) 88%, 
+        rgba(35, 21, 87, 1) 100%
+    ); */
+    width: 100%;
+    height: 15px;
+    transition: all 0.3s ease-in-out;
+    background-color: lightgray;
+    float: right;
+}
+
 #intro, #about-me, #work, #projects, #skills, #hobbies, #contact {
     scroll-margin-top: calc(var(--navbar-height));
 }
 
 #intro {
     margin-top: var(--navbar-height);
-    min-height: 91vh;
+    min-height: calc(100vh - var(--navbar-height));
     text-align: center;
     background-color:lightblue;
     padding-top: 12%;
@@ -198,6 +228,7 @@ h4, h5, h6, p {
 
 #contact {
     background-color: rgb(255, 204, 184);
+    min-height: calc(100vh - var(--navbar-height));
 }
 
 #resume {
@@ -206,9 +237,9 @@ h4, h5, h6, p {
     min-width: 420px;
     display: block;
 }
-#contact .resume-button {margin-top: 1em;}
+#contact .resume-button {margin-top: 2em;}
 #contact .resume-button::after {content: url(./images/download-icon.png)}
-#contact .social-button {margin-top: 1em; margin-right: auto;}
+#contact .social-button {margin-top: 2em; margin-right: auto;}
 
 /* Cool Things */
 
