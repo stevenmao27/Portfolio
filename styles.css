@@ -21,9 +21,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    padding: 5px;
-    background-color: darkgray;
+    background-color: #818B99;
+    border: 3px solid transparent;
+    border-radius: 9px;
+    background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -38,6 +39,7 @@
     max-width: 980px;
     margin: 0 auto;
     padding: 45px;
+    border-radius: 5px;
 }
 
 @media (max-width: 767px) {
@@ -47,6 +49,8 @@
 }
 
 /* Basic Element Configuration */
+
+body {max-width: 100vw;}
 
 h1, h2, h3 {
     font-family: 'Playfair Display SC', serif;
@@ -70,18 +74,49 @@ h4, h5, h6, p {
 
 /* Section IDs and Classes */
 
-#intro, #about-me, #work, #projects, #skills, #hobbies, #contact {scroll-margin-top: var(--navbar-height);}
+#intro, #about-me, #work, #projects, #skills, #hobbies, #contact {
+    scroll-margin-top: calc(var(--navbar-height));
+}
 
 #intro {
     margin-top: var(--navbar-height);
     max-height: 91vh;
-    height: 91vh;
+    min-height: 91vh;
     text-align: center;
     background-color:lightblue;
+    padding-top: 12%;
+}
+/* To avoid margin collapse, add padding-top to parent instead */
+.intro-name {
+    font-size: 5rem;
 }
 
-.intro-name {font-size: 5rem; margin-top: 3em; display:inline-block;} /* Careful of margin collapsing */
-.intro-desc {font-size: 1.75rem; margin-top: 60px; color: rgb(80, 80, 80);}
+@keyframes typing {
+    0% {width: 0%;}
+    100% {width: 50%;}
+}
+
+@keyframes blinking {
+    0% {border-color: transparent;}
+    50% {border-color: black;}
+    100% {border-color: transparent;}
+}
+
+.intro-desc {
+    font-size: 1.75rem;
+    font-family: 'Roboto Mono', monospace;
+    margin: 60px auto 0px;
+    color: rgb(80, 80, 80);
+    display: inline-block;
+
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid black;
+    letter-spacing: .15em;
+    animation: typing 3s steps(39, end),
+        blinking 1s step-end infinite;
+}
+
 @keyframes blob {  
     0% {border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;}
     14% {border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;}
@@ -98,16 +133,38 @@ h4, h5, h6, p {
     animation: blob 20s ease infinite;
 } 
 
+/* Sections */
 
+.section-header {
+    text-align: center;
+    margin: 2em auto;
+}
 
 #about-me {
     
 }
 
+.about-me-header {margin-top: 2em;}
+#about-me li {margin-top: 1em;}
+.image-div {position: relative;}
+.about-me-campus {top: -50px; left: 75px; transform: rotate(-10deg);}
+.about-me-pumpkin {top: 50px; left: 400px; transform: rotate(10deg);}
+.about-me-georgia {top: 125px; left: 75px; transform: rotate(-5deg);}
+#about-me img {
+    max-width: 360px;
+    max-height: 360px;
+    position: absolute;
+    border-radius: 10px;
+    transition: all ease-out 0.3s;
+}
+#about-me img:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
 
 
 #work {
-    
+    padding: 0.1px; /* To prevent margin collapsing */
     background-color: lightcoral;
 }
 
@@ -115,17 +172,12 @@ h4, h5, h6, p {
     
 }
 
-.project-section {}
-.project-title {}
-.project-subtext {}
-.project-desc {}
+.project-title {margin-bottom: 0.5em;}
+.project-subtext {margin-bottom: 2em;}
+.project-desc {margin-bottom: 2em; margin-right: 2em;}
+.project-padding {padding: 2em 3em 4em 3em;}
 
-.blubot-section {
-    padding: 0px;
-    background-color: azure;
-}
-
-.blubot-link {
+.button-slide {
     border-radius: 5px;
     border: 1px solid #000;
     color: #000;
@@ -136,20 +188,25 @@ h4, h5, h6, p {
     text-decoration: none;
     transition: all 0.5s ease;
 }
-.blubot-link:hover {
+.button-slide:hover {
     color: #fff;
     background-color: #000;
 }
-.blubot-link::after {
+.button-slide::after {
     content: "〉";
     margin-left: 0px;
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
 }
-.blubot-link:hover::after {
+.button-slide:hover::after {
     margin-left: 20px;
     opacity: 1;
 }
+
+.portfolio-img {width: 857px; height: 600px; border-radius: 5px;}
+
+.blubot-section {background-color: azure;}
+
 
 .agtern-presentation {
     width: 600px;

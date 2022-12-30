@@ -11,7 +11,7 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <!-- Playfair Display and Roboto Slab Font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=Roboto+Mono:wght@300&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
         <!-- Manual Styles -->
         <link rel="stylesheet" href="styles.css">
         <!-- Icons from FontAwesome -->
@@ -51,23 +51,50 @@
         <!-- Title Page -->
         <section id="intro">
             <h1 class="intro-name">Hi, I'm Steven Mao</h1>
-            <h4 class="intro-desc">Computer Scientist, Developer, Student.</h3>
+            <h4 class="intro-desc">Computer Scientist, Developer, Student.</h4><br>
             <img class="intro-img" src="./images/headshot.png" alt="Professional Image" width="200px" height="200px">
         </section>
         
 
         <!-- About Me -->
         <section id="about-me">
-            <h2>About Me</h2>
-            <p>I am an Honors Student at Texas A&M University at College Station studying Computer Science in the Engineering School! 
-                I have a passion for all things Software and Data, but I'm always open to explore new life paths. I love CS for the puzzle-like nature of back-end engineering, 
-                the artistic and creative freedom of UI/UX, and the journey of discovering subtle yet insightful information with Data Science. 
-                I am flexible yet dedicated to the projects I work on.</p>
+            <h2 class="section-header">About Me</h2>
+            <div class="container-fluid">
+                <div class="row project-padding">
+                    <div class="col-md-6">
+                        <p>
+                            Hey there! I am an Honors Student at Texas A&M University at College Station studying Computer Science in the Engineering School! 
+                            I have a passion for all things Software and Data, but I'm always open to explore new life paths. I love CS for the puzzle-like 
+                            nature of back-end engineering, the artistic and creative freedom of UI/UX, and the journey of discovering subtle yet 
+                            insightful information with Data Science. When I'm not working, I'm grinding my latest favorite FPS game, practicing 
+                            new classical piano pieces (it's like meditation), failing to cook a new recipe, or taking a trip to my apartment gym 
+                            for a workout! I am always eager to learn useful skills and never back down from a challenge 😎.
+                        </p>
+
+                        <h4 class="about-me-header">Quick Facts:</h4>
+
+                        <ul>
+                            <li>Studying CS @ TAMU, from 2021 - 2024 (expected)</li>
+                            <li>Minor in Mathematics (Statistics-related Coursework)</li>
+                            <li>Has at least $600 worth of stationary 🖋️</li>
+                            <li>Is lactose intolerant 🥛</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="image-div">
+                            <img class="about-me-georgia" src="./images/georgia-pic.png" alt="Georgia Mountain">    
+                            <img class="about-me-pumpkin" src="./images/pumpkin-photo.png" alt="Pumpkin Patch">
+                            <img class="about-me-campus" src="./images/tamu-campus.jpg" alt="TAMU campus">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </section>
         
         <!-- Work? -->
         <section id="work">
-            <h2>Work Experience</h2>
+            <h2 class="section-header">Work Experience</h2>
             <h3>Teacher Assistant @ Texas A&M University College of Engineering</h3>
             <p><em>August 2022 - Present</em><br>
             Teaching is surprisingly fun, and helping others learn is satisfying. Hm...</p>
@@ -75,16 +102,61 @@
         
         <!-- Projects -->
         <section id="projects">
-            <h2>Projects</h2>
+            <h2 class="section-header">Projects</h2>
 
-            <h3 class="project-title">Portfolio Website: You're looking at it.</h3>
-            <p class="project-subtext"><em>December 2022 - Present</em></em><p>
-            <p class="project-desc">Resumes are boring no matter what you put on it. I decided a website was the best way to portray that with a bit of front-end skills and artistic freedom.
-            Here's a little sneak peek into the design and thought process...</p>
+            <div class="container-fluid">
+                <div class="row project-padding">
+                    <div class="col-md-5 g-5">
+                        <h3 class="project-title">Portfolio: You're looking at it.</h3>
+                        <p class="project-subtext"><em>December 2022 - Present</em></em><p>
+                        <p class="project-desc">Resumes are boring no matter what you put on it. I decided a website was the best way to portray that with a bit of front-end skills and artistic freedom.
+                        Here's a little sneak peek into the design and thought process...</p>
+
+                        <a class="button-slide" href="https://github.com/stevenmao27/Portfolio">View Code</a>
+                    </div>
+                    <div class="col-md-7 g-5">
+                        <div id="portfolio-carousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#portfolio-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#portfolio-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#portfolio-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#portfolio-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#portfolio-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="portfolio-img" src="./images/portfolio-1.png" alt="title page">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="portfolio-img" src="./images/portfolio-4.png" alt="title page">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="portfolio-img" src="./images/portfolio-3.png" alt="title page">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="portfolio-img" src="./images/portfolio-2.png" alt="title page">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="portfolio-img" src="./images/portfolio-5.png" alt="title page">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#portfolio-carousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#portfolio-carousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             
             <div class="container-fluid blubot-section">
-                <div class="row">
-                    <div class="col-md-6">
+                <div class="row project-padding">
+                    <div class="col-md-5 g-5">
                         <h3 class="project-title">Blubot: Discord Music and Utility Application</h3>
                         <p class="project-subtext"><em>May 2022 - Present</em><p>
                         <p class="project-desc">It's hard to organize a quick five-man team to play games with a group of friends when people are committing and uncommitting. If there's no bot out there that 
@@ -92,11 +164,11 @@
                         control panel as intuitive as Spotify, and a fully functioning queue with history. It runs on a containerized daemon in an AWS EC2 instance and has 
                         full documentation on the repository. Check it out!</p>
                         
-                        <a class="blubot-link" href="https://github.com/stevenmao27/Blubot">Visit Blubot</a>
+                        <a class="button-slide" href="https://github.com/stevenmao27/Blubot">Visit Blubot</a>
                     </div>
                     
-                    <div class="col-md-6">
-                        <div style="height: 400px; overflow-y:scroll;" class="markdown-body">
+                    <div class="col-md-7 g-5">
+                        <div style="height: 600px; overflow-y:scroll;" class="markdown-body">
                             <h1 id="-blubot">🤖 Blubot</h1>
                             <p><img src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="Discord"> <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&amp;logo=python&amp;logoColor=ffdd54" alt="Python"> <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&amp;logo=amazon-aws&amp;logoColor=white" alt="AWS"> <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&amp;logo=ubuntu&amp;logoColor=white" alt="Ubuntu"> <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&amp;logo=visual-studio-code&amp;logoColor=white" alt="Visual Studio Code"></p>            <p>This is a fully functioning Discord Bot with polling, event signups, full-blown music player + GUI, timers, and more miscellaneous applications and tools!</p>
                             <h2 id="-features">🧐 Features</h2>
@@ -279,10 +351,10 @@
         
         <!-- Skills and Hobbies? -->
         <section id="skills">
-            <h2>Skills</h2>
+            <h2 class="section-header">Skills</h2>
         </section>
         <section id="hobbies">
-            <h2>Hobbies</h2>
+            <h2 class="section-header">Hobbies</h2>
         </section>
         <!-- Contact Information -->
         <section id="contact">
