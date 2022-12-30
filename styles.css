@@ -80,26 +80,15 @@ h4, h5, h6, p {
 
 #intro {
     margin-top: var(--navbar-height);
-    max-height: 91vh;
     min-height: 91vh;
     text-align: center;
     background-color:lightblue;
     padding-top: 12%;
+    padding-bottom: 6%;
 }
-/* To avoid margin collapse, add padding-top to parent instead */
+
 .intro-name {
     font-size: 5rem;
-}
-
-@keyframes typing {
-    0% {width: 0%;}
-    100% {width: 50%;}
-}
-
-@keyframes blinking {
-    0% {border-color: transparent;}
-    50% {border-color: black;}
-    100% {border-color: transparent;}
 }
 
 .intro-desc {
@@ -117,16 +106,7 @@ h4, h5, h6, p {
         blinking 1s step-end infinite;
 }
 
-@keyframes blob {  
-    0% {border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;}
-    14% {border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;}
-    28% {border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;}
-    42% {border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;}
-    56% {border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;}
-    70% {border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;}
-    84% {border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;}
-    100% {border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;}
-}
+
 .intro-img {
     border-radius: 25%; 
     margin-top: 60px;
@@ -146,36 +126,113 @@ h4, h5, h6, p {
 
 .about-me-header {margin-top: 2em;}
 #about-me li {margin-top: 1em;}
-.image-div {position: relative;}
-.about-me-campus {top: -50px; left: 75px; transform: rotate(-10deg);}
-.about-me-pumpkin {top: 50px; left: 400px; transform: rotate(10deg);}
-.about-me-georgia {top: 125px; left: 75px; transform: rotate(-5deg);}
-#about-me img {
-    max-width: 360px;
-    max-height: 360px;
+.image-div {position: relative; min-height: 445px;}
+@media only screen and (max-width: 768px) {
+    .image-div {margin-top: 100px;}
+}
+.image-div img {
+    
     position: absolute;
     border-radius: 10px;
     transition: all ease-out 0.3s;
 }
+.about-me-campus {
+    max-width: 50%;
+    top: 0px;
+    left: 75px;
+    transform: rotate(-10deg);
+}
+.about-me-pumpkin {
+    max-height: 70%;
+    top: 100px;
+    left: 400px;
+    transform: rotate(10deg);
+    max-height: 70%
+}
+.about-me-georgia {
+    max-width: 55%;
+    max-height: 55%;
+    top: 175px;
+    left: 75px;
+    transform: rotate(-5deg);
+}
 #about-me img:hover {
-    transform: scale(1.2);
+    transform: scale(1.2) rotate(0deg);
     z-index: 1;
 }
 
 
 #work {
-    padding: 0.1px; /* To prevent margin collapsing */
+    overflow: auto; /* To prevent margin collapsing */
     background-color: lightcoral;
 }
+/* Should match with project paddings */
+.lonely-padding {padding: 2em 4em 4em 4em;}
 
-#projects { 
-    
-}
-
+#projects {}
 .project-title {margin-bottom: 0.5em;}
 .project-subtext {margin-bottom: 2em;}
 .project-desc {margin-bottom: 2em; margin-right: 2em;}
 .project-padding {padding: 2em 3em 4em 3em;}
+
+
+
+.portfolio-img {width: 857px; height: 600px; border-radius: 5px;}
+.carousel-control-prev, .carousel-control-next {width: 12%;}
+
+.blubot-section {background-color: azure;}
+
+.agtern-presentation {
+    width: 600px;
+    height: 500px;
+}
+
+#skills {
+    
+    background-color: rgb(216, 255, 216);
+}
+
+#hobbies {
+    
+}
+
+#contact {
+    background-color: rgb(255, 204, 184);
+}
+
+#resume {
+    margin-top: 2em;
+    min-height: 570px;
+    min-width: 420px;
+    display: block;
+}
+#contact .resume-button {margin-top: 1em;}
+#contact .resume-button::after {content: url(./images/download-icon.png)}
+#contact .social-button {margin-top: 1em; margin-right: auto;}
+
+/* Cool Things */
+
+@keyframes blob {  
+    0% {border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;}
+    14% {border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;}
+    28% {border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;}
+    42% {border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;}
+    56% {border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;}
+    70% {border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;}
+    84% {border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;}
+    100% {border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;}
+}
+@keyframes typing {
+    0% {width: 0%;}
+    100% {width: 50%;}
+}
+@keyframes blinking {
+    0% {border-color: transparent;}
+    50% {border-color: black;}
+    100% {border-color: transparent;}
+}
+
+
 
 .button-slide {
     border-radius: 5px;
@@ -202,29 +259,3 @@ h4, h5, h6, p {
     margin-left: 20px;
     opacity: 1;
 }
-
-.portfolio-img {width: 857px; height: 600px; border-radius: 5px;}
-
-.blubot-section {background-color: azure;}
-
-
-.agtern-presentation {
-    width: 600px;
-    height: 500px;
-}
-
-#skills {
-    
-    background-color: lightgreen;
-}
-
-#hobbies {
-    
-}
-
-#contact {
-    
-    background-color: lightsalmon;
-}
-
-

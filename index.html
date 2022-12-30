@@ -93,11 +93,18 @@
         </section>
         
         <!-- Work? -->
-        <section id="work">
+        <section id="work" class="lonely-padding">
             <h2 class="section-header">Work Experience</h2>
-            <h3>Teacher Assistant @ Texas A&M University College of Engineering</h3>
-            <p><em>August 2022 - Present</em><br>
-            Teaching is surprisingly fun, and helping others learn is satisfying. Hm...</p>
+            <h3 class="project-title">Teacher Assistant @ Texas A&M University College of Engineering</h3>
+            <p class="project-subtext"><em>August 2022 - Present</em></p>
+            <p class="project-desc">
+                Although teaching is as fun as it looks, it's not as easy as it looks. As a Teacher Assistant for the College of Engineering, 
+                I taught primarily Python and Software Engineering basics. The college's introductory engineering course focused on only 
+                programming and OOP concepts, so many to-be engineers were quite surprised they needed to know computer science. <br><br>
+                In addition to organizing meetings with fellow TAs and Professors, grading students' labs and quizzes, and holding 
+                office hours for tutoring, I also designed the spreadsheet for my professor's 7 sections for keeping track of all students'
+                progress and TAs' responsibilities.
+            </p>
         </section>
         
         <!-- Projects -->
@@ -108,7 +115,7 @@
                 <div class="row project-padding">
                     <div class="col-md-5 g-5">
                         <h3 class="project-title">Portfolio: You're looking at it.</h3>
-                        <p class="project-subtext"><em>December 2022 - Present</em></em><p>
+                        <p class="project-subtext"><em>December 2022 - Present</em><p>
                         <p class="project-desc">Resumes are boring no matter what you put on it. I decided a website was the best way to portray that with a bit of front-end skills and artistic freedom.
                         Here's a little sneak peek into the design and thought process...</p>
 
@@ -124,19 +131,19 @@
                                 <button type="button" data-bs-target="#portfolio-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
                             </div>
                             <div class="carousel-inner">
-                                <div class="carousel-item active">
+                                <div class="carousel-item active" data-bs-interval="3000">
                                     <img class="portfolio-img" src="./images/portfolio-1.png" alt="title page">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item" data-bs-interval="3000">
                                     <img class="portfolio-img" src="./images/portfolio-4.png" alt="title page">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item" data-bs-interval="3000">
                                     <img class="portfolio-img" src="./images/portfolio-3.png" alt="title page">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item" data-bs-interval="3000">
                                     <img class="portfolio-img" src="./images/portfolio-2.png" alt="title page">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item" data-bs-interval="3000">
                                     <img class="portfolio-img" src="./images/portfolio-5.png" alt="title page">
                                 </div>
                             </div>
@@ -327,25 +334,29 @@
             </div>
             
             
-    
-            <h3 class="project-title">American Airlines</h3>
-            <p class="project-subtext"><em>November 2022 - Present</em><p>
-            <p class="project-desc">A data science and statistics focused team project. Given an official and raw dataset of airport-related activity from American Airlines, the goal is to design and 
-            implement a machine learning model that will predict the amount of checked bags given any time, source, destination, airport, and more parameters. This is an 
-            ongoing project whose goal is incredibly simple yet the solution is more sophisticated than it seems.</p>
-    
-            <h3 class="project-title">Agtern</h3>
-            <p class="project-subtext"><em>August 2022 - December 2022</em><p>
-            <figure>
-                <img class="agtern-presentation" src="./images/agtern-presentation.png" alt="presentation photo">
-                <figcaption>Presenting Our Project to the University. It's a circular auditorium, so you can only see my back. (casual dress code)</figcaption>
-            </figure>
-            
-            <p class="project-desc">Agtern was a team project led by a good friend. A software focused on getting University Students internships, its main functions were to scrape
-            across many websites, categorize and identify their appropriate major-specific attributes, and display them on a nice GUI. The majority of my contribution was towards
-            developing the GUI. We first began using Python's abhhorently ugly Tkinter module, which, similar to Java FX/SceneBuilder and other desktop GUI programs, was divided into
-            "frames" or "panels", the equivalent of a stylized div. Soon, we realized the Windows Vista-like GUI wasn't going to fly, so we then transitioned to Angular. Despite 
-            copying the exact same UI structure, it looked many degrees better!</p>
+            <div class="lonely-padding">
+                <h3 class="project-title">American Airlines</h3>
+                <p class="project-subtext"><em>November 2022 - Present</em><p>
+                <p class="project-desc">A data science and statistics focused team project. Given an official and raw dataset of airport-related activity from American Airlines, the goal is to design and 
+                implement a machine learning model that will predict the amount of checked bags given any time, source, destination, airport, and more parameters. This is an 
+                ongoing project whose goal is incredibly simple yet the solution is more sophisticated than it seems.</p>
+            </div>
+
+
+            <div class="lonely-padding">
+                <h3 class="project-title">Agtern</h3>
+                <p class="project-subtext"><em>August 2022 - December 2022</em><p>
+                <figure>
+                    <img class="agtern-presentation" src="./images/agtern-presentation.png" alt="presentation photo">
+                    <figcaption>Presenting Our Project to the University. It's a circular auditorium, so you can only see my back. (casual dress code)</figcaption>
+                </figure>
+                
+                <p class="project-desc">Agtern was a team project led by a good friend. A software focused on getting University Students internships, its main functions were to scrape
+                across many websites, categorize and identify their appropriate major-specific attributes, and display them on a nice GUI. The majority of my contribution was towards
+                developing the GUI. We first began using Python's abhhorently ugly Tkinter module, which, similar to Java FX/SceneBuilder and other desktop GUI programs, was divided into
+                "frames" or "panels", the equivalent of a stylized div. Soon, we realized the Windows Vista-like GUI wasn't going to fly, so we then transitioned to Angular. Despite 
+                copying the exact same UI structure, it looked many degrees better!</p>
+            </div>
         </section>
         
         
@@ -358,25 +369,32 @@
         </section>
         <!-- Contact Information -->
         <section id="contact">
-            <h2>Contact</h2>
-            <table>
-                <tr>
-                    <td><i class="fa fa-envelope-o" aria-hidden="true"></i></td>
-                    <td>steven2003mao@gmail.com</td>
-                </tr>
-                <tr>
-                    <td><i class="fa fa-github" aria-hidden="true"></i></td>
-                    <td>https://www.github.com/stevenmao27</td>
-                </tr>
-                <tr>
-                    <td><i class="fa fa-linkedin" aria-hidden="true"></i></td>
-                    <td>https://www.linkedin.com/in/steven-mao</td>
-                </tr>
-            </table>
+            <div class="container-fluid">
+                <div class="row project-padding">
+                    <div class="col-md-5 g-5">
+                        <h2>Resume</h2>
+                        <embed id="resume" src="./files/Mao_Steven_2024_CPSC.pdf" type="application/pdf">
+                        <a class="button-slide resume-button" href="./files/Mao_Steven_2024_CPSC.pdf" download="./files/Mao_Steven_2024_CPSC.pdf">Download</a>
+                    </div>
+                    <div class="col-md-7 g-5">
+                        <h2>Contact</h2>
+                            <a class="button-slide social-button" href="mailto:steven2003mao@gmail.com">
+                                <i class="fa fa-lg fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;steven2003mao@gmail.com
+                            </a>
+                            <br>
+                            <a class="button-slide social-button" href="https://www.linkedin.com/in/steven-mao">
+                                <i class="fa fa-lg fa-linkedin" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;linkedin.com/in/steven-mao
+                            </a>
+                            <br>
+                            <a class="button-slide social-button" href="https://www.github.com/stevenmao27">
+                                <i class="fa fa-lg fa-github" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;github.com/stevenmao27
+                            </a>
+                    </div>
+                </div>
+            </div>
             
-            <h2>Resume</h2>
-            <embed src="./files/Mao_Steven_2024_CPSC.pdf" type="application/pdf">
-            <a href="./files/Mao_Steven_2024_CPSC.pdf" download="./files/Mao_Steven_2024_CPSC.pdf">Download</a>
+            
+            
         </section>
         
         
