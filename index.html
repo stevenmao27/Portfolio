@@ -53,8 +53,11 @@
         <!-- Title Page -->
         <section id="intro">
             <h1 class="intro-name">Hi, I'm Steven Mao</h1>
-            <h4 class="intro-desc">Computer Scientist, Developer, Student.</h4><br>
+            <h4 class="intro-desc">Software Engineer, Data Scientist, Whatever.</h4><br>
             <img class="intro-img" src="./images/headshot.png" alt="Professional Image" width="200px" height="200px">
+            <a class="social-icon-dark linkedin-icon"><i class="fa fa-lg fa-linkedin" aria-hidden="true"></i></a>
+            <a class="social-icon-dark github-icon"><i class="fa fa-lg fa-github" aria-hidden="true"></i></a>
+            <a class="social-icon-dark email-icon"><i class="fa fa-lg fa-envelope-o" aria-hidden="true"></i></a>
         </section>
         
 
@@ -65,9 +68,9 @@
                 <div class="row project-padding">
                     <div class="col-md-6">
                         <p>
-                            Hey there! I am an Honors Student at Texas A&M University at College Station studying Computer Science in the Engineering School! 
+                            Hey there! I am an Honors Computer Science Major at Texas A&M University's Engineering College! 
                             I have a passion for all things Software and Data, but I'm always open to explore new life paths. I love CS for the puzzle-like 
-                            nature of back-end engineering, the artistic and creative freedom of UI/UX, and the journey of discovering subtle yet 
+                            nature of back-end engineering, the artistic and creative freedom of UI/UX, and the journey of discovering subtle and 
                             insightful information with Data Science. When I'm not working, I'm grinding my latest favorite FPS game, practicing 
                             new classical piano pieces (it's like meditation), failing to cook a new recipe, or taking a trip to my apartment gym 
                             for a workout! I am always eager to learn useful skills and never back down from a challenge 😎.
@@ -76,10 +79,11 @@
                         <h4 class="about-me-header">Quick Facts:</h4>
 
                         <ul>
-                            <li>Studying CS @ TAMU, from 2021 - 2024 (expected)</li>
-                            <li>Minor in Mathematics (Statistics-related Coursework)</li>
-                            <li>Has at least $600 worth of stationary 🖋️</li>
+                            <li>Studying CS @ TAMU, from 2021 - 2024</li>
+                            <li>Minor in Mathematics (Statistics-focused Coursework)</li>
+                            <li>Has over $600 worth of stationary for no particular reason 🖋️</li>
                             <li>Is lactose intolerant 🥛</li>
+                            <li>Skates, but gets injured a lot (still worth getting to class in 1/4 the time) 🛹</li>
                         </ul>
                     </div>
                     <div class="col-md-6">
@@ -355,14 +359,24 @@
                             across many websites, categorize and identify their appropriate major-specific attributes, and display them on a nice GUI. The majority of my contribution was towards
                             developing the GUI. We first began using Python's abhhorently ugly Tkinter module, which, similar to Java FX/SceneBuilder and other desktop GUI programs, was divided into
                             "frames" or "panels", the equivalent of a stylized div. Soon, we realized the Windows Vista-like GUI wasn't going to fly, so we then transitioned to Angular. Despite 
-                            copying the exact same UI structure, it looked many degrees better!
+                            copying the exact same UI structure, it looked many degrees better! Here's some old iterations of different frameworks used during the process...
                         </p>
+                        <a class="button-slide button-dark-mode" href="https://www.youtube.com/watch?v=QtYvDcYtCVM">Watch Our MVP Demo</a>
                     </div>
                     <div class="col-md-6 g-5">
-                        <figure>
-                            <img class="agtern-presentation" src="./images/agtern-presentation.png" alt="presentation photo">
-                            <figcaption>Presenting Our Project to the University. It's a circular auditorium, so you can only see my back. (casual dress code)</figcaption>
-                        </figure>
+                        <div id="agtern-carousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="3000">
+                                    <img class="agtern-img" src="./images/agtern-presentation.png" alt="agtern presentation">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <img class="agtern-img" src="./images/agtern-angular.png" alt="agtern angular">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <img class="agtern-img" src="./images/agtern-tkinter.png" alt="agtern tkinter">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 

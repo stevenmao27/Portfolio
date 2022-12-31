@@ -44,6 +44,7 @@
     padding: 45px;
     border-radius: 5px;
     border: 1px solid white;
+    transition: all 0.3s ease;
 }
 
 .markdown-body:hover {
@@ -84,10 +85,21 @@ h4, h5, h6, p, li {
     font-weight: 500;
     margin: auto 1.5em;
     color: white;
+    transition: all 2s ease-in-out;
 }
 
 .navbar-brand:hover, .nav-link:hover {
-    color: aqua;
+    font-weight: 900;
+    background-image: linear-gradient(270deg, rgba(35,21,87,1) 0%, rgba(68,16,122,1) 29%, rgba(255,19,97,1) 67%, rgba(255,248,0,1) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 3s ease-in-out alternate infinite;
+}
+
+@keyframes textclip {
+    to {background-position: 100% center;}
 }
 
 /* Section IDs and Classes */
@@ -144,6 +156,7 @@ h4, h5, h6, p, li {
     background-color:black;
     padding-top: 12%;
     padding-bottom: 6%;
+    position: relative;
 }
 
 .intro-name {
@@ -161,7 +174,7 @@ h4, h5, h6, p, li {
     white-space: nowrap;
     border-right: .15em solid whitesmoke;
     letter-spacing: .15em;
-    animation: typing 3s steps(39, end),
+    animation: typing 5s steps(44, end),
         blinking 1s step-end infinite;
 }
 
@@ -180,7 +193,7 @@ h4, h5, h6, p, li {
 }
 
 #about-me {
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(68,16,122,1) 100%);
+    background-color: rgb(12, 9, 46);
     overflow: auto;
 }
 
@@ -242,9 +255,21 @@ h4, h5, h6, p, li {
 
 .blubot-section {}
 
-.agtern-presentation {
-    width: 600px;
+#agtern-carousel {
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.agtern-img {
+    max-height: 500px;
+    max-width: 800px;
+}
+#agtern-carousel .carousel-inner {
+    text-align: center;
+    vertical-align: middle;
     height: 500px;
+    width: 800px;
+    overflow: hidden;
 }
 
 #skills {
@@ -325,5 +350,37 @@ h4, h5, h6, p, li {
 }
 .button-dark-mode:hover {
     color: black;
-    background-color: white;
+    background: linear-gradient(135deg, rgba(253,142,213,1) 0%, rgba(33,191,254,1) 100%);
+    border: none;
+}
+.social-icon-dark {
+    position: absolute;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 13px;
+    border-radius: 5px;
+    border: 1px solid white;
+    transition: all 0.5s ease;
+}
+.social-icon-dark:hover {
+    box-shadow: 0px 0px 10px 2px white;
+}
+@media only screen and (max-width: 1100px) {
+    .social-icon-dark {display:none;}
+}
+.linkedin-icon {
+    left: 5em;
+    top: 20em;
+    background: linear-gradient(135deg, rgba(0, 64, 97, 1) 0%, rgba(0, 119, 181, 1) 50%, rgba(0, 168, 255, 1) 100%);
+}
+.github-icon {
+    left: 5em;
+    top: 25em;
+    background: linear-gradient(135deg, rgba(0,0,0,1) 50%, rgba(57,211,83,1) 100%);
+}
+.email-icon {
+    left: 5em;
+    top: 30em;
+    background: linear-gradient(135deg, rgba(227,65,51,1) 0%, rgba(243,182,4,1) 33%, rgba(50,163,80,1) 66%, rgba(64,129,236,1) 100%);
 }
