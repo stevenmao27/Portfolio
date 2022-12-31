@@ -10,8 +10,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <!-- Playfair Display and Roboto Slab Font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=Roboto+Mono:wght@300&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+        <!-- Playfair Display and Roboto Slab + Mono Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=Roboto+Mono:wght@300&family=Roboto+Slab:wght@300;500&display=swap" rel="stylesheet">
         <!-- Manual Styles -->
         <link rel="stylesheet" href="styles.css">
         <!-- Icons from FontAwesome -->
@@ -121,7 +121,7 @@
                         <p class="project-desc">Resumes are boring no matter what you put on it. I decided a website was the best way to portray that with a bit of front-end skills and artistic freedom.
                         Here's a little sneak peek into the design and thought process...</p>
 
-                        <a class="button-slide" href="https://github.com/stevenmao27/Portfolio">View Code</a>
+                        <a class="button-slide button-dark-mode" href="https://github.com/stevenmao27/Portfolio">View Code</a>
                     </div>
                     <div class="col-md-7 g-5">
                         <div id="portfolio-carousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
@@ -173,11 +173,11 @@
                         control panel as intuitive as Spotify, and a fully functioning queue with history. It runs on a containerized daemon in an AWS EC2 instance and has 
                         full documentation on the repository. Check it out!</p>
                         
-                        <a class="button-slide" href="https://github.com/stevenmao27/Blubot">Visit Blubot</a>
+                        <a class="button-slide button-dark-mode" href="https://github.com/stevenmao27/Blubot">Visit Blubot</a>
                     </div>
                     
                     <div class="col-md-7 g-5">
-                        <div style="height: 600px; overflow-y:scroll;" class="markdown-body">
+                        <div class="markdown-body">
                             <h1 id="-blubot">🤖 Blubot</h1>
                             <p><img src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="Discord"> <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&amp;logo=python&amp;logoColor=ffdd54" alt="Python"> <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&amp;logo=amazon-aws&amp;logoColor=white" alt="AWS"> <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&amp;logo=ubuntu&amp;logoColor=white" alt="Ubuntu"> <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&amp;logo=visual-studio-code&amp;logoColor=white" alt="Visual Studio Code"></p>            <p>This is a fully functioning Discord Bot with polling, event signups, full-blown music player + GUI, timers, and more miscellaneous applications and tools!</p>
                             <h2 id="-features">🧐 Features</h2>
@@ -345,19 +345,27 @@
             </div>
 
 
-            <div class="lonely-padding">
-                <h3 class="project-title">Agtern</h3>
-                <p class="project-subtext"><em>August 2022 - December 2022</em><p>
-                <figure>
-                    <img class="agtern-presentation" src="./images/agtern-presentation.png" alt="presentation photo">
-                    <figcaption>Presenting Our Project to the University. It's a circular auditorium, so you can only see my back. (casual dress code)</figcaption>
-                </figure>
+            <div class="container-fluid">
+                <div class="row project-padding">
+                    <div class="col-md-6 g-5">
+                        <h3 class="project-title">Agtern</h3>
+                        <p class="project-subtext"><em>August 2022 - December 2022</em><p>
+                        <p class="project-desc">
+                            Agtern was a team project led by a good friend. A software focused on getting University Students internships, its main functions were to scrape
+                            across many websites, categorize and identify their appropriate major-specific attributes, and display them on a nice GUI. The majority of my contribution was towards
+                            developing the GUI. We first began using Python's abhhorently ugly Tkinter module, which, similar to Java FX/SceneBuilder and other desktop GUI programs, was divided into
+                            "frames" or "panels", the equivalent of a stylized div. Soon, we realized the Windows Vista-like GUI wasn't going to fly, so we then transitioned to Angular. Despite 
+                            copying the exact same UI structure, it looked many degrees better!
+                        </p>
+                    </div>
+                    <div class="col-md-6 g-5">
+                        <figure>
+                            <img class="agtern-presentation" src="./images/agtern-presentation.png" alt="presentation photo">
+                            <figcaption>Presenting Our Project to the University. It's a circular auditorium, so you can only see my back. (casual dress code)</figcaption>
+                        </figure>
+                    </div>
+                </div>
                 
-                <p class="project-desc">Agtern was a team project led by a good friend. A software focused on getting University Students internships, its main functions were to scrape
-                across many websites, categorize and identify their appropriate major-specific attributes, and display them on a nice GUI. The majority of my contribution was towards
-                developing the GUI. We first began using Python's abhhorently ugly Tkinter module, which, similar to Java FX/SceneBuilder and other desktop GUI programs, was divided into
-                "frames" or "panels", the equivalent of a stylized div. Soon, we realized the Windows Vista-like GUI wasn't going to fly, so we then transitioned to Angular. Despite 
-                copying the exact same UI structure, it looked many degrees better!</p>
             </div>
         </section>
         
@@ -376,19 +384,19 @@
                     <div class="col-md-5 g-5">
                         <h2>Resume</h2>
                         <embed id="resume" src="./files/Mao_Steven_2024_CPSC.pdf" type="application/pdf">
-                        <a class="button-slide resume-button" href="./files/Mao_Steven_2024_CPSC.pdf" download="./files/Mao_Steven_2024_CPSC.pdf">Download</a>
+                        <a class="button-slide resume-button button-dark-mode" href="./files/Mao_Steven_2024_CPSC.pdf" download="./files/Mao_Steven_2024_CPSC.pdf">Download</a>
                     </div>
                     <div class="col-md-7 g-5">
                         <h2>Contact</h2>
-                            <a class="button-slide social-button" href="mailto:steven2003mao@gmail.com">
+                            <a class="button-slide social-button button-dark-mode" href="mailto:steven2003mao@gmail.com">
                                 <i class="fa fa-lg fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;steven2003mao@gmail.com
                             </a>
                             <br>
-                            <a class="button-slide social-button" href="https://www.linkedin.com/in/steven-mao">
+                            <a class="button-slide social-button button-dark-mode" href="https://www.linkedin.com/in/steven-mao">
                                 <i class="fa fa-lg fa-linkedin" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;linkedin.com/in/steven-mao
                             </a>
                             <br>
-                            <a class="button-slide social-button" href="https://www.github.com/stevenmao27">
+                            <a class="button-slide social-button button-dark-mode" href="https://www.github.com/stevenmao27">
                                 <i class="fa fa-lg fa-github" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;github.com/stevenmao27
                             </a>
                     </div>
