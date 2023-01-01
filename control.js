@@ -11,12 +11,11 @@ window.onscroll = () => {
         if ((position > lastScrollPosition && !isHidden) || (position < lastScrollPosition && isHidden)) {
             $("nav").toggleClass("navbar-hidden");
             $(".progress-track").toggleClass("raise-progress-bar");
-            $(".progress-bar").toggleClass("raise-progress-bar");
         }
 
         //progress bar
-        let progress = 100 - Math.floor((document.body.scrollTop || position) / (document.body.scrollHeight - window.innerHeight) * 100);
-        $(".progress-bar").css("width", progress + "%");
+        let progress = 100 * (document.body.scrollTop || position) / (document.body.scrollHeight - window.innerHeight);
+        $(".progress-bar").css("transform", `translateX(${progress}vw)`);
 
         //putting scroll on cooldown, update lastScrollPosition after done
         availableToScroll = false;

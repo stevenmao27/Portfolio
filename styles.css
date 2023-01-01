@@ -52,7 +52,7 @@
     box-shadow: 0 0 10px 2px white;
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .markdown-body {
         padding: 15px;
     }
@@ -109,7 +109,7 @@ h4, h5, h6, p, li {
     background-color: black;
     transition: all 0.3s ease-in-out;
 }
-.navbar-hidden {top: -90px;}
+.navbar-hidden {transform: translateY(-90px);}
 
 .progress-track {
     z-index: 1;
@@ -119,6 +119,7 @@ h4, h5, h6, p, li {
     height: 15px;
     top: calc(var(--navbar-height) - 15px);
     transition: all 0.3s ease-in-out;
+    overflow-x: hidden;
 }
 .progress-bar {
     /* background: linear-gradient(
@@ -143,7 +144,7 @@ h4, h5, h6, p, li {
     transition: all 0.3s ease-in-out;
 }
 .raise-progress-bar {
-    top: 0px;
+    transform:translateY(-90px);
 }
 
 #intro, #about-me, #work, #projects, #skills, #hobbies, #contact {
@@ -165,8 +166,12 @@ h4, h5, h6, p, li {
     width: max-content;
     padding: 0 1em 10px;
     margin: 0px auto 0px;
-    border: 1px solid white;
+    /* background: linear-gradient(90deg, rgba(35,21,87,1) 0%, rgba(68,16,122,1) 29%, rgba(255,19,97,1) 67%, rgba(255,248,0,1) 100%); */
+    border: 2px solid white;
+    border-radius: 5px;
+    border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='300' height='100' viewBox='0 0 300 100' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='300' height='100' stroke='slategray' stroke-linecap='round' stroke-width='20' stroke-dasharray='25' stroke-dashoffset='0' pathLength='100' fill='none'/%3E%3Cstyle%3E rect %7B animation: stroke 60s infinite linear; %7D @keyframes stroke %7B to %7B stroke-dashoffset: 100; %7D %7D %3C/style%3E%3C/svg%3E") 1;
 }
+
 
 .intro-desc {
     font-size: 1.75rem;
@@ -179,11 +184,12 @@ h4, h5, h6, p, li {
     white-space: nowrap;
     border-right: .15em solid whitesmoke;
     letter-spacing: .15em;
+    will-change: contents;
     animation: typing 5s steps(44, end),
         blinking 1s step-end infinite;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 991px) {
     .intro-desc {
         white-space: inherit;
         animation: none;
@@ -206,7 +212,7 @@ h4, h5, h6, p, li {
 }
 
 #about-me {
-    background-color: rgb(12, 9, 46);
+    background-color: black;
     overflow: auto;
 }
 
@@ -377,7 +383,7 @@ h4, h5, h6, p, li {
     padding: 10px 13px;
     border-radius: 5px;
     border: 1px solid white;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
 }
 .social-icon-dark:hover {
     box-shadow: 0px 0px 10px 2px white;
