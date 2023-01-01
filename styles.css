@@ -109,6 +109,7 @@ h4, h5, h6, p, li {
     background-color: black;
     transition: all 0.3s ease-in-out;
 }
+.navbar-toggler {background-color: white;}
 .navbar-hidden {transform: translateY(-90px);}
 
 .progress-track {
@@ -190,6 +191,10 @@ h4, h5, h6, p, li {
 }
 
 @media only screen and (max-width: 991px) {
+    .intro-name {
+        border: none;
+        border-image: none;
+    }
     .intro-desc {
         white-space: inherit;
         animation: none;
