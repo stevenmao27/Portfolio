@@ -162,11 +162,14 @@ h4, h5, h6, p, li {
     position: relative;
 }
 
+.intro-name-wrapper {
+    margin: 0px auto 0px;
+}
+
 .intro-name {
     font-size: 5rem;
-    width: fit-content;
     padding: 0 1em 10px;
-    margin: 0px auto 0px;
+    display: inline-block;
     /* background: linear-gradient(90deg, rgba(35,21,87,1) 0%, rgba(68,16,122,1) 29%, rgba(255,19,97,1) 67%, rgba(255,248,0,1) 100%); */
     border: 2px solid white;
     border-radius: 5px;
@@ -278,7 +281,7 @@ h4, h5, h6, p, li {
 .portfolio-img {width: 857px; height: 600px; border-radius: 5px;}
 .carousel-control-prev, .carousel-control-next {width: 12%;}
 
-.blubot-section {}
+.blubot-section {position: initial;}
 
 #agtern-carousel {
     text-align: center;
@@ -302,7 +305,7 @@ h4, h5, h6, p, li {
 }
 
 #hobbies {
-    
+    position: initial;
 }
 
 #contact {
