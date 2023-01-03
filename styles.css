@@ -173,21 +173,22 @@ h4, h5, h6, p, li {
     border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='300' height='100' viewBox='0 0 300 100' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='300' height='100' stroke='slategray' stroke-linecap='round' stroke-width='20' stroke-dasharray='25' stroke-dashoffset='0' pathLength='100' fill='none'/%3E%3Cstyle%3E rect %7B animation: stroke 60s infinite linear; %7D @keyframes stroke %7B to %7B stroke-dashoffset: 100; %7D %7D %3C/style%3E%3C/svg%3E") 1;
 }
 
+.intro-desc-wrapper {
+    display: inline-block;
+    margin: 60px auto 0px;
+    text-align: center;
+    height: 2.1rem;
+}
 
 .intro-desc {
     font-size: 1.75rem;
     font-family: 'Roboto Mono', monospace;
-    margin: 60px auto 0px;
+    margin: 0px auto 0px;
     color: whitesmoke;
-    display: inline-block;
-
     overflow: hidden;
     white-space: nowrap;
     border-right: .15em solid whitesmoke;
     letter-spacing: .15em;
-    will-change: contents;
-    animation: none; /*typing 10s steps(38, start),
-        blinking 1s step-end infinite;*/
 }
 
 @media only screen and (max-width: 991px) {
@@ -341,10 +342,14 @@ h4, h5, h6, p, li {
     84% {border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;}
     100% {border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;}
 }
-/* @keyframes typing {
+@keyframes typing {
     0% {width: 0%;}
-    100% {width: 50%;}
-} */
+    100% {width: 100%;}
+}
+@keyframes untyping {
+    0% {width: 100%;}
+    100% {width: 0%;}
+}
 @keyframes blinking {
     0% {border-color: transparent;}
     50% {border-color: whitesmoke;}
