@@ -164,7 +164,7 @@ h4, h5, h6, p, li {
 
 .intro-name {
     font-size: 5rem;
-    width: max-content;
+    width: fit-content;
     padding: 0 1em 10px;
     margin: 0px auto 0px;
     /* background: linear-gradient(90deg, rgba(35,21,87,1) 0%, rgba(68,16,122,1) 29%, rgba(255,19,97,1) 67%, rgba(255,248,0,1) 100%); */
@@ -186,8 +186,8 @@ h4, h5, h6, p, li {
     border-right: .15em solid whitesmoke;
     letter-spacing: .15em;
     will-change: contents;
-    animation: typing 5s steps(44, end),
-        blinking 1s step-end infinite;
+    animation: none; /*typing 10s steps(38, start),
+        blinking 1s step-end infinite;*/
 }
 
 @media only screen and (max-width: 991px) {
@@ -311,9 +311,16 @@ h4, h5, h6, p, li {
 
 #resume {
     margin-top: 2em;
-    min-height: 600px;
-    min-width: 450px;
+    height: 35vw;
+    width: 30vw;
     display: block;
+    resize: both;
+}
+@media only screen and (max-width: 991px) {
+    #resume {
+        width: 80vw;
+        height: 100vw;
+    }
 }
 #contact .resume-button {margin-top: 2em;}
 #contact .resume-button::after {content: url(./images/download-icon.png)}
@@ -334,10 +341,10 @@ h4, h5, h6, p, li {
     84% {border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;}
     100% {border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;}
 }
-@keyframes typing {
+/* @keyframes typing {
     0% {width: 0%;}
     100% {width: 50%;}
-}
+} */
 @keyframes blinking {
     0% {border-color: transparent;}
     50% {border-color: whitesmoke;}
@@ -378,7 +385,7 @@ h4, h5, h6, p, li {
 .button-dark-mode:hover {
     color: black;
     background: linear-gradient(135deg, rgba(253,142,213,1) 0%, rgba(33,191,254,1) 100%);
-    border: none;
+    border-color: black;
 }
 .social-icon-dark {
     position: absolute;
