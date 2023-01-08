@@ -45,15 +45,6 @@ let wordBank = [
     "i have $70 worth of chickfila reward points 🤡"
 ];
 
-window.onload = () => {
-    // setTimeout(draw, 1000);
-    html = $('.intro-desc')
-    if (window.innerWidth > 991) {
-        setAnimation()
-    }
-    else html.text("I Love Computer Science!")
-}
-
 function setAnimation() {
     let word = wordBank[w]
     w = (w + 1) % wordBank.length
@@ -67,37 +58,25 @@ function setAnimation() {
     setTimeout(setAnimation, (2 * elapsedTime + waitTime) * 1000)
 }
 
-// let i = 0; // index of character in current word
-// let w = 0; // index of word in word bank
-// let wordBank = ["I'm Studying Software Engineering", "I'm Studying Data Science"];
-// let currWord = wordBank[w];
-// let html; // html object
-// let mode = 0; // 0: adding, 1: waiting, 2: deleting
+window.onload = () => {
+    // intro animation intialization
+    html = $('.intro-desc')
+    if (window.innerWidth > 991) {
+        setAnimation()
+    }
+    else html.text("I'm a Computer Scientist.")
 
-
-// INFINITE RECURSION. DOES EVERYTHING. MODES: add html, do nothing, delete
-// function draw() {
-//     html.text(html.text() + currWord[i])
-//     i++
-//     // adding done
-//     if (i !== currWord.length) setTimeout(draw, 500)
-//     else {
-//         i--
-//         setTimeout(undraw, 3000)
-//     }
-// }
-
-// function undraw() {
-//     html.text(html.text().slice(0, -1))
-//     i--
-//     // deleting done, set up next word
-//     if (i >= 0) {
-//         setTimeout(undraw, 500)
-//     }
-//     else {
-//         i = 0
-//         w = (w + 1) % wordBank.length
-//         currWord = wordBank[w]
-//         setTimeout(draw, 1000)
-//     }
-// }
+    // reveal animation initializaiton
+    const SCROLL_OPTIONS = {
+        delay: 250, 
+        reset: true, 
+        origin: 'bottom',
+        distance: '30px',
+        viewFactor: 0.20, 
+        viewOffset: {top: 105}
+    }
+    let scroll = ScrollReveal();
+    scroll.reveal('section', SCROLL_OPTIONS);
+    scroll.reveal('#projects > div', SCROLL_OPTIONS);
+    scroll.clean('#intro')
+}
