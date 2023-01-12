@@ -86,7 +86,6 @@ h4, h5, h6, p, li {
     font-weight: 500;
     margin: auto 1.5em;
     color: white;
-    transition: all 2s ease-in-out;
 }
 
 .navbar-brand:hover, .nav-link:hover {

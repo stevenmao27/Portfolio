@@ -33,16 +33,11 @@ let wordBank = [
     "I'm Open-Minded and Creative!",
     "I'm Interested in Research",
     "I'm Majoring in Computer Science",
-    "Roasted Duck Tastes So Good Mmmmm",
+    "Roasted Duck Is My Favorite Food",
     "You're Still Watching?",
     "Stop.",
     "...", 
     "...",
-    "I'm Studying Software Engineering",
-    "You Thought That Was A Loop, Didn't You?",
-    "You've Made It This Far, Let Me Tell You Something",
-    "i hate veggies >:-( 🥬",
-    "i have $70 worth of chickfila reward points 🤡"
 ];
 
 function setAnimation() {
@@ -68,10 +63,10 @@ window.onload = () => {
 
     // reveal animation initializaiton
     const SCROLL_OPTIONS = {
-        delay: 250, 
-        reset: true, 
+        delay: 200, 
+        reset: false, 
         origin: 'bottom',
-        distance: '30px',
+        distance: '50px',
         viewFactor: 0.20, 
         viewOffset: {top: 105}
     }
