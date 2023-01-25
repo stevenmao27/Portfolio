@@ -19,7 +19,7 @@ window.onscroll = () => {
 
         //putting scroll on cooldown, update lastScrollPosition after done
         availableToScroll = false;
-        setTimeout(() => {availableToScroll = true;}, 200);
+        setTimeout(() => {availableToScroll = true;}, 100);
         lastScrollPosition = position;
     }
 }
