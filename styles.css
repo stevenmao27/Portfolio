@@ -349,7 +349,7 @@ h4, h5, h6, p, li {
     }
 }
 #contact .resume-button {margin-top: 2em;}
-#contact .resume-button::after {content: url(./images/download-icon.png)}
+/* #contact .resume-button::after {content: url(./images/download-icon.png)} */
 #contact .social-button {margin-top: 2em; margin-right: auto;}
 .project-padding > .col-md-5 {
     text-align: center;

@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="styles.css">
         <!-- Icons from FontAwesome -->
         <script src="https://use.fontawesome.com/536c0361e3.js"></script>
+        <script src="https://kit.fontawesome.com/4565a791af.js" crossorigin="anonymous"></script>
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <!-- JQuery CDN -->
@@ -108,21 +109,87 @@
         <!-- Work? -->
         <section id="work" class="lonely-padding">
             <h2 class="section-header">Work Experience</h2>
-            <h3 class="project-title">Teacher Assistant @ Texas A&M University College of Engineering</h3>
+            <h3 class="project-title">Peer Teacher / TA @ Texas A&M University College of Engineering</h3>
             <p class="project-subtext"><em>August 2022 - Present</em></p>
             <p class="project-desc">
-                Although teaching is as fun as it looks, it's not as easy as it looks. As a Teacher Assistant for the College of Engineering, 
-                I taught primarily Python and Software Engineering basics. The college's introductory engineering course focused on only 
-                programming and OOP concepts, so many to-be engineers were quite surprised they needed to know computer science. <br><br>
-                In addition to organizing meetings with fellow TAs and Professors, grading students' labs and quizzes, and holding 
-                office hours for tutoring, I also designed the spreadsheet for my professor's 7 sections for keeping track of all students'
-                progress and TAs' responsibilities.
+                Although teaching is as fun as it looks, it's not as easy as it looks. As a Peer Teacher for the College of Engineering, 
+                I taught 3 different courses.
+            </p>
+            <p class="project-desc">
+                ENGR 102: Engineering Computation. A python and software design course focused on common design
+                paradigms and computer applications. Taught two sections of 100+ students each, held office hours, and
+                graded 200+ lab assignments and exams. Led exam review solo whenever midterms and finals approached.
+            </p>
+            <p class="project-desc">
+                ENGR 216: Experimental Physics. A physics course focused on engineering problems, including
+                critical statistics concepts such as error propagation and confidence intervals. Taught 6 sections of 30+ 
+                students each, held additional office hours, and graded assignments.
+            </p>
+            <p class="project-desc">
+                CLEN 261: Engineering Profession. Led 2-hour recitations alone for 100+ students weekly. Guided Students
+                along a semester-long project based on the NAE Grand Challenge.
             </p>
         </section>
         
         <!-- Projects -->
         <section id="projects">
             <h2 class="section-header">Projects</h2>
+
+            <div class="container-fluid">
+                <div class="row project-padding">
+                    <div class="col-lg-5 g-5">
+                        <h3 class="project-title">Investart Up: Financial Literacy Simulation.</h3>
+                        <p class="project-subtext"><em>HACKATHON 2023 - January</em><p>
+                        <div class="project-tags">
+                            <div class="tag">React</div>
+                            <div class="tag">Express JS</div>
+                            <div class="tag">API</div>
+                            <div class="tag">HTML</div>
+                            <div class="tag">CSS</div>
+                            <div class="tag">JavaScript</div>
+                        </div>
+                        <p class="project-desc">Personal Finance is one of those topics that are highly valuable, 
+                            but children rarely learn it until they're adults. As every single successful investor says: 
+                            <b>start early!</b> That's why we made a simulation that's easy to pick up, but it helps train 
+                            good habits. Patience, Research, and Proactivity are one of the many key skills you need 
+                            to become financially successful!
+                        </p>
+                        <p class="project-desc">
+                            This app grabs historical stock data from an API to simulate a stock market, with some key 
+                            differences. Once in a while, a scandal or sensational news article will appear, but you 
+                            won't be notified. To promote proactivity and research, you'll have to actively check 
+                            the latest news, which may give you hints about the future stock prices...
+                        </p>
+
+                        <a class="button-slide button-dark-mode" href="https://github.com/stevenmao27/Portfolio"><i class="fa-brands fa-github"></i> View Code</a>
+                        <a class="button-slide button-dark-mode" href="https://devpost.com/software/investart-up?ref_content=my-projects-tab&ref_feature=my_projects"><i class="fa-brands fa-dev"></i> Read DevPost</a>
+                    </div>
+                    <div class="col-lg-7 g-5">
+                        <div id="carouselExampleIndicators" class="carousel slide">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="./images/investart-simulation.png" class="d-block w-100" alt="./images/investart-simulation.png">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="./images/investart-calculator.png" class="d-block w-100" alt="./images/investart-simulation.png">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="container-fluid">
                 <div class="row project-padding">
@@ -139,7 +206,7 @@
                         <p class="project-desc">Resumes are boring no matter what you put on it. I decided a website was the best way to portray that with a bit of front-end skills and artistic freedom.
                         Here's a little sneak peek into the design and thought process...</p>
 
-                        <a class="button-slide button-dark-mode" href="https://github.com/stevenmao27/Portfolio">View Code</a>
+                        <a class="button-slide button-dark-mode" href="https://github.com/stevenmao27/Portfolio"><i class="fa-brands fa-github"></i> View Code</a>
                     </div>
                     <div class="col-lg-7 g-5">
                         <div id="portfolio-carousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
@@ -198,7 +265,7 @@
                         control panel as intuitive as Spotify, and a fully functioning queue with history. It runs on a containerized daemon in an AWS EC2 instance and has 
                         full documentation on the repository. Check it out!</p>
                         
-                        <a class="button-slide button-dark-mode" href="https://github.com/stevenmao27/Blubot">Visit Blubot</a>
+                        <a class="button-slide button-dark-mode" href="https://github.com/stevenmao27/Blubot"><i class="fa-brands fa-github"></i> Visit Blubot</a>
                     </div>
                     
                     <div class="col-lg-7 g-5">
@@ -396,7 +463,7 @@
                             "frames" or "panels", the equivalent of a stylized div. Soon, we realized the Windows Vista-like GUI wasn't going to fly, so we then transitioned to Angular. Despite 
                             copying the exact same UI structure, it looked many degrees better! Here's some old iterations of different frameworks used during the process...
                         </p>
-                        <a class="button-slide button-dark-mode" href="https://www.youtube.com/watch?v=QtYvDcYtCVM">Watch Our MVP Demo</a>
+                        <a class="button-slide button-dark-mode" href="https://www.youtube.com/watch?v=QtYvDcYtCVM"><i class="fa-brands fa-youtube"></i> Watch Our MVP Demo</a>
                     </div>
                     <div class="col-lg-6 g-5">
                         <div id="agtern-carousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
@@ -433,7 +500,9 @@
                     <div class="col-lg-6 g-5">
                         <h2>Resume</h2>
                         <embed id="resume" src="./files/Mao_Steven_2024_CPSC.pdf" type="application/pdf">
-                        <a class="button-slide resume-button button-dark-mode" href="./files/Mao_Steven_2024_CPSC.pdf" download="./files/Mao_Steven_2024_CPSC.pdf">Download</a>
+                        <a class="button-slide resume-button button-dark-mode" href="./files/Mao_Steven_2024_CPSC.pdf" download="./files/Mao_Steven_2024_CPSC.pdf">
+                            <i class="fa-solid fa-download"></i> Download
+                        </a>
                     </div>
                     <div class="col-lg-6 g-5">
                         <h2>Contact</h2>

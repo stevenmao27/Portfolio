@@ -32,12 +32,8 @@ let wordBank = [
     "I'm Studying Data Science",
     "I'm Open-Minded and Creative!",
     "I'm Interested in Research",
-    "I'm Majoring in Computer Science",
+    "I'm a Full Stack Developer",
     "Roasted Duck Is My Favorite Food",
-    "You're Still Watching?",
-    "Stop.",
-    "...", 
-    "...",
 ];
 
 function setAnimation() {
